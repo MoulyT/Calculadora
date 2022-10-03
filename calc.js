@@ -95,7 +95,7 @@ function doOperation(value) {
       onGoingResult = onGoingResult / value;
   }
   console.log("the value is" + value);
-  console.log("ongoingresult=" + onGoingResult);
+  console.log("onGoingResult=" + onGoingResult);
 }
 
 function screenRefresh() {
