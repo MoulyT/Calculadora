@@ -45,12 +45,26 @@ button {
   background-color: rgb(46, 47, 48);
 }
 
+button:hover {
+  background-color: silver;
+  cursor: pointer;
+}
+
 .button--orange {
   background-color: orange;
 }
 
+.button--orange:hover {
+  background-color: white;
+  color: orange;
+}
+
 .button--grey {
   background-color: grey;
+}
+
+.button--grey:hover {
+  background-color: lightgray;
 }
 
 .button--big {

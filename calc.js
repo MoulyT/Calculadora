@@ -39,10 +39,9 @@ function procesSymbol(symbol) {
       if (buffer.length === 1) {
         buffer = 0;
       } else buffer = buffer.substring(0, buffer.length - 1);
-      console.log("C");
       break;
     case ",":
-      console.log("coma");
+      buffer = buffer + ".";
       break;
     case "=":
       if (previousOperation === null) {
@@ -52,11 +51,11 @@ function procesSymbol(symbol) {
       previousOperation = null;
       buffer = "" + onGoingResult;
       onGoingResult = 0;
-
-      console.log("igual");
       break;
-    case "%":
-      console.log("%");
+    case "±":
+      buffer = parseFloat(buffer);
+      buffer = -1 * buffer;
+      buffer = "" + buffer;
       break;
     case "+":
     case "-":
@@ -98,8 +97,6 @@ function doOperation(value) {
       onGoingResult = onGoingResult / value;
       break;
   }
-  console.log("the value is" + value);
-  console.log("onGoingResult=" + onGoingResult);
 }
 
 function screenRefresh() {
