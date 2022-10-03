@@ -21,7 +21,7 @@ function buttonClick(value) {
 }
 
 function procesNumber(number) {
-  if (buffer == "0") {
+  if (buffer === "0") {
     buffer = number;
   } else {
     buffer = buffer + number;
@@ -70,7 +70,7 @@ function procesSymbol(symbol) {
 
 function procesMath(value) {
   previousOperation = value;
-  if (buffer === 0) {
+  if (buffer === "0") {
     //we dont add, substract,multiply nor divide zero
     return;
   }
@@ -87,12 +87,16 @@ function doOperation(value) {
   switch (previousOperation) {
     case "+":
       onGoingResult = onGoingResult + value;
+      break;
     case "-":
       onGoingResult = onGoingResult - value;
+      break;
     case "*":
       onGoingResult = onGoingResult * value;
+      break;
     case "/":
       onGoingResult = onGoingResult / value;
+      break;
   }
   console.log("the value is" + value);
   console.log("onGoingResult=" + onGoingResult);
